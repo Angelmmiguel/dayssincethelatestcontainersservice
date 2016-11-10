@@ -1,6 +1,131 @@
 /* System fonts */
 /* https://github.com/mrmrs/css-system-fonts */
 
+@import "animations"
+@import "mixins"
+
+// Colors
+$light_gray: #888
+
 body
   font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'Segoe UI', 'lucida grande', 'helvetica neue', helvetica, 'Fira Sans', roboto, noto, 'Droid Sans', cantarell, oxygen, ubuntu, 'franklin gothic medium', 'century gothic', 'Liberation Sans', sans-serif
-  font-color: #222323
+  color: #222323
+
+/* Header of the page */
+header
+  height: 100vh
+  width: 80%
+  display: table
+  margin: 0 auto
+  text-align: center
+  position: relative
+  border-bottom: 1px solid #ddd
+  overflow: hidden
+
+  .container-rain
+    position: absolute
+    width: 100%
+
+    .box
+      opacity: .7
+      position: absolute
+      top: -9999px
+      background-image: url(./images/container.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      z-index: -1
+
+    +create-box(1, 10%, 100px, 13s, 0s, 0px)
+    +create-box(2, 25%, 30px, 10s, 2s, 2px)
+    +create-box(3, 48%, 60px, 7s, 1s, 1px)
+    +create-box(4, 67%, 85px, 9s, 1s, 0px)
+
+    @media screen and (min-width: 500px)
+      +create-box(5, 89%, 70px, 7s, 0s, 1px)
+
+  .container-party
+    display: table-cell
+    vertical-align: middle
+
+    .days
+      margin: 0 0 30px
+      font-size: 10em
+
+      @media screen and (min-width: 760px)
+        font-size: 15em
+
+      @media screen and (min-width: 1000px)
+        font-size: 20em
+
+    .days-text
+      font-style: italic
+      font-weight: 100
+      color: $light_gray
+      font-family: Palatino, Bookman, Times, 'New Century Schoolbook', serif
+      bottom: 20px
+
+/* Main container */
+main
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 80%
+  margin: 3em auto 1em
+
+  .app
+    height: 130px
+    width: 100%
+    position: relative
+    padding-bottom: 5px
+    margin-bottom: 2em
+    border-bottom-style: solid
+    border-bottom-width: 0
+
+    @media screen and (min-width: 950px)
+      width: 40%
+
+    .image
+      position: absolute
+      right: 0
+      top: 20px
+      text-align: right
+      z-index: -1
+
+      img
+        height: 60px
+        max-width: 140px
+
+    h1
+      margin-bottom: .5em
+
+    p
+      margin-top: .5em
+
+      a
+        color: $light_gray
+        font-style: italic
+
+    &:hover
+      bottom: 5px
+      padding-bottom: 0px
+      border-bottom-width: 5px
+
+      img
+        filter: none
+
+/* Footer */
+footer
+  width: 80%
+  margin: 0 auto
+  padding: 3em 0
+  border-top: 1px solid #ddd
+  text-align: center
+  color: $light_gray
+
+  a
+    text-decoration: none
+    color: darken($light_gray, 10%)
+    font-weight: bold
+
+    &:hover
+      text-decoration: underline

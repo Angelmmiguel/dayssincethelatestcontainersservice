@@ -2,4 +2,26 @@ doctype html
 html
   include _head.pug
 body
-  p We have #{apps.length} apps now!!
+  header
+    div(class="container-rain")
+      each i in [1, 2, 3, 4, 5]
+        div(class="box box-" + i)
+    section(class="container-party")
+      p(class="days" id="numDays") -
+      h1(class="days-text") Days since the latest containers service
+
+  main
+    each app, i in apps
+      article(class="app" style="border-bottom-color: " + app.color)
+        h1= app.name
+        p
+          a(href=app.website target="_blank")= showLink(app.website)
+        div(class="image")
+          img(src="./images/" + app.logo)
+
+  include _footer.pug
+
+  script.
+    var lastDay = #{lastDay};
+    var numDays = parseInt((new Date().getTime() - lastDay) / (1000 * 60 * 60 * 24));
+    document.getElementById("numDays").innerHTML = numDays.toString();
