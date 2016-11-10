@@ -2,7 +2,71 @@
   {
     "name": "hyper.sh",
     "website": "https://hyper.sh",
-    "images": "hypersh",
-    "created_at": 1478644050441
+    "logo": "hypersh.png",
+    "created_at": 1478355523000,
+    "color": "#172b46"
+  },
+  {
+    "name": "WeDeploy",
+    "website": "http://wedeploy.com",
+    "logo": "wedeploy.svg",
+    "created_at": 1478355523000,
+    "color": "#00d46a"
+  },
+  {
+    "name": "Kontena",
+    "website": "https://kontena.io",
+    "logo": "kontena.png",
+    "created_at": 1478355523000,
+    "color": "#6083C4"
+  },
+  {
+    "name": "Now",
+    "website": "https://zeit.co/now",
+    "logo": "zeitnow.svg",
+    "created_at": 1478355523000,
+    "color": "#000000"
+  },
+  {
+    "name": "Mantl",
+    "website": "http://mantl.io",
+    "logo": "mantl.svg",
+    "created_at": 1478355523000,
+    "color": "#f57c34"
+  },
+  {
+    "name": "Rancher",
+    "website": "http://rancher.com",
+    "logo": "rancher.png",
+    "created_at": 1478355523000,
+    "color": "#00558b"
+  },
+  {
+    "name": "Cloud 66",
+    "website": "http://cloud66.com",
+    "logo": "cloud66.png",
+    "created_at": 1478355523000,
+    "color": "#43ba47"
+  },
+  {
+    "name": "Amazon ECS",
+    "website": "https://aws.amazon.com/ecs",
+    "logo": "amazonecs.png",
+    "created_at": 1478355523000,
+    "color": "#CE853B"
+  },
+  {
+    "name": "Google CE",
+    "website": "https://cloud.google.com/container-engine",
+    "logo": "googlece.svg",
+    "created_at": 1478355523000,
+    "color": "#2E419F"
+  },
+  {
+    "name": "Docker Cloud",
+    "website": "https://cloud.docker.com",
+    "logo": "dockercloud.png",
+    "created_at": 1478355523000,
+    "color": "#0096e5"
   }
 ]
