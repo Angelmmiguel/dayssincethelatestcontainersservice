@@ -70,10 +70,17 @@ gulp.task('png', function() {
     .pipe(gulp.dest('./build/images'));
 });
 
+// Save favicon
+gulp.task('favicon', function() {
+  return gulp.src('./favicon.png')
+    .pipe(gulp.dest('./build'));
+})
+
 // Default
-gulp.task('default', ['views', 'sass', 'png', 'svg'], function() {
+gulp.task('default', ['views', 'sass', 'png', 'svg', 'favicon'], function() {
   gulp.watch('styles/*.sass' , ['sass']);
   gulp.watch('templates/*.pug' , ['views']);
   gulp.watch('images/*.png' , ['png']);
   gulp.watch('images/*.svg' , ['svg']);
+  gulp.watch('favicon.png' , ['favicon']);
 });
