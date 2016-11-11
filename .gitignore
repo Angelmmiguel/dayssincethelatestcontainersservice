@@ -1,8 +1,0 @@
-# Mac things
-.DS_Store
-
-# Ignore build
-build/*
-
-# Modules
-node_modules

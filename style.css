@@ -1,0 +1,145 @@
+/* System fonts */
+/* https://github.com/mrmrs/css-system-fonts */
+@keyframes falldown {
+  from {
+    top: 0;
+    transform: translateY(-5vh); }
+  to {
+    top: 0;
+    transform: translateY(110vh); } }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'Segoe UI', 'lucida grande', 'helvetica neue', helvetica, 'Fira Sans', roboto, noto, 'Droid Sans', cantarell, oxygen, ubuntu, 'franklin gothic medium', 'century gothic', 'Liberation Sans', sans-serif;
+  color: #222323; }
+
+/* Header of the page */
+header {
+  height: 100vh;
+  width: 80%;
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden; }
+  header .container-rain {
+    position: absolute;
+    width: 100%; }
+    header .container-rain .box {
+      opacity: .7;
+      position: absolute;
+      top: -9999px;
+      background-image: url(./images/container.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1; }
+    header .container-rain .box-1 {
+      width: 100px;
+      height: 100px;
+      left: 10%;
+      animation: falldown 13s infinite linear;
+      animation-delay: 0s;
+      filter: blur(0px); }
+    header .container-rain .box-2 {
+      width: 30px;
+      height: 30px;
+      left: 25%;
+      animation: falldown 10s infinite linear;
+      animation-delay: 2s;
+      filter: blur(2px); }
+    header .container-rain .box-3 {
+      width: 60px;
+      height: 60px;
+      left: 48%;
+      animation: falldown 7s infinite linear;
+      animation-delay: 1s;
+      filter: blur(1px); }
+    header .container-rain .box-4 {
+      width: 85px;
+      height: 85px;
+      left: 67%;
+      animation: falldown 9s infinite linear;
+      animation-delay: 1s;
+      filter: blur(0px); }
+    @media screen and (min-width: 500px) {
+      header .container-rain .box-5 {
+        width: 70px;
+        height: 70px;
+        left: 89%;
+        animation: falldown 7s infinite linear;
+        animation-delay: 0s;
+        filter: blur(1px); } }
+  header .container-party {
+    display: table-cell;
+    vertical-align: middle; }
+    header .container-party .days {
+      margin: 0 0 30px;
+      font-size: 10em; }
+      @media screen and (min-width: 760px) {
+        header .container-party .days {
+          font-size: 15em; } }
+      @media screen and (min-width: 1000px) {
+        header .container-party .days {
+          font-size: 20em; } }
+    header .container-party .days-text {
+      font-style: italic;
+      font-weight: 100;
+      color: #888;
+      font-family: Palatino, Bookman, Times, 'New Century Schoolbook', serif;
+      bottom: 20px; }
+
+/* Main container */
+main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 3em auto 1em; }
+  main .app {
+    height: 130px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 2em;
+    border-bottom-style: solid;
+    border-bottom-width: 0; }
+    @media screen and (min-width: 950px) {
+      main .app {
+        width: 40%; } }
+    main .app .image {
+      position: absolute;
+      right: 0;
+      top: 20px;
+      text-align: right;
+      z-index: -1; }
+      main .app .image img {
+        height: 60px;
+        max-width: 140px; }
+    main .app h1 {
+      margin-bottom: .5em; }
+    main .app p {
+      margin-top: .5em; }
+      main .app p a {
+        color: #888;
+        font-style: italic; }
+    main .app:hover {
+      bottom: 5px;
+      padding-bottom: 0px;
+      border-bottom-width: 5px; }
+      main .app:hover img {
+        filter: none; }
+
+/* Footer */
+footer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3em 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #888; }
+  footer a {
+    text-decoration: none;
+    color: #6f6f6f;
+    font-weight: bold; }
+    footer a:hover {
+      text-decoration: underline; }
