@@ -5,7 +5,8 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   imagemin = require('gulp-imagemin'),
   responsive = require('gulp-responsive'),
-  pngquant = require('imagemin-pngquant');
+  pngquant = require('imagemin-pngquant'),
+  ghPages = require('gulp-gh-pages');
 
 // Load data
 var apps = JSON.parse(fs.readFileSync('./apps.json'));
@@ -37,21 +38,21 @@ gulp.task('views', function() {
         showLink: showLink
       }
     }))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./dist'));
 });
 
 // Compile CSS
 gulp.task('sass', function () {
   return gulp.src('./styles/style.sass')
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./dist'));
 });
 
 // Optimize svg
 gulp.task('svg', function() {
   return gulp.src('./images/*.svg')
     .pipe(imagemin())
-    .pipe(gulp.dest('./build/images'));
+    .pipe(gulp.dest('./dist/images'));
 });
 
 // Optimize Images
@@ -67,17 +68,26 @@ gulp.task('png', function() {
       progressive: true,
       use: [pngquant()]
     }))
-    .pipe(gulp.dest('./build/images'));
+    .pipe(gulp.dest('./dist/images'));
 });
 
 // Save favicon
 gulp.task('favicon', function() {
   return gulp.src('./favicon.png')
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./dist'));
 })
 
+// Deploy new version to gh-pages! :D
+gulp.task('deploy', ['dist'], function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
+// Compile all assets
+gulp.task('dist', ['views', 'sass', 'png', 'svg', 'favicon'], function() { });
+
 // Default
-gulp.task('default', ['views', 'sass', 'png', 'svg', 'favicon'], function() {
+gulp.task('default', ['dist'], function() {
   gulp.watch('styles/*.sass' , ['sass']);
   gulp.watch('templates/*.pug' , ['views']);
   gulp.watch('images/*.png' , ['png']);

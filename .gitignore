@@ -1,8 +1,13 @@
 # Mac things
 .DS_Store
 
-# Ignore build
-build/*
+# Ignore dist
+dist
+build
+.publish
+
+# Log
+npm-debug*
 
 # Modules
 node_modules
