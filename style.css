@@ -145,11 +145,15 @@ footer {
     color: #6f6f6f;
     font-weight: bold; }
     footer a.octocat {
-      display: inline-block;
-      padding-right: 1em;
-      margin-right: 1em;
-      border-right: 1px solid #a2a2a2;
-      position: relative;
-      top: 5px; }
+      display: block;
+      margin-bottom: .7em; }
       footer a.octocat img {
         width: 24px; }
+      @media screen and (min-width: 550px) {
+        footer a.octocat {
+          display: inline-block;
+          padding-right: 1em;
+          margin-right: 1em;
+          border-right: 1px solid #a2a2a2;
+          position: relative;
+          top: 5px; } }
