@@ -132,12 +132,16 @@ footer
     font-weight: bold
 
     &.octocat
-      display: inline-block
-      padding-right: 1em
-      margin-right: 1em
-      border-right: 1px solid lighten($light_gray, 10%)
-      position: relative
-      top: 5px
+      display: block
+      margin-bottom: .7em
 
       img
         width: 24px
+
+      @media screen and (min-width: 550px)
+        display: inline-block
+        padding-right: 1em
+        margin-right: 1em
+        border-right: 1px solid lighten($light_gray, 10%)
+        position: relative
+        top: 5px
