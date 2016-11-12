@@ -82,10 +82,12 @@ gulp.task('png', function() {
     .pipe(gulp.dest('./dist/images'));
 });
 
-// Save favicon
-gulp.task('favicon', function() {
-  return gulp.src('./favicon.png')
-    .pipe(gulp.dest('./dist'));
+// Save static files
+gulp.task('static', function() {
+  return gulp.src([
+    './favicon.png',
+    './CNAME'
+  ]).pipe(gulp.dest('./dist'));
 })
 
 // Deploy new version to gh-pages! :D
@@ -95,7 +97,7 @@ gulp.task('deploy', ['dist'], function() {
 });
 
 // Compile all assets
-gulp.task('dist', ['views', 'sass', 'png', 'svg', 'favicon'], function() { });
+gulp.task('dist', ['views', 'sass', 'png', 'svg', 'static'], function() { });
 
 // Default
 gulp.task('default', ['dist'], function() {
@@ -103,5 +105,4 @@ gulp.task('default', ['dist'], function() {
   gulp.watch('templates/*.pug' , ['views']);
   gulp.watch('images/*.png' , ['png']);
   gulp.watch('images/*.svg' , ['svg']);
-  gulp.watch('favicon.png' , ['favicon']);
 });
