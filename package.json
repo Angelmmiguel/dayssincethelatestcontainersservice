@@ -1,7 +1,7 @@
 {
   "name": "howlongsincethelatestapptodeploycontainers",
   "version": "1.0.0",
-  "description": "Apps to deploy containers to production are like Node libraries. Every day we have a bunch of new ones.",
+  "description": "Apps to deploy containers are like Node libraries. Every day we have a bunch of new ones.",
   "main": "",
   "scripts": {
     "publish": "gulp deploy",

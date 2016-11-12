@@ -6,7 +6,8 @@ var gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   responsive = require('gulp-responsive'),
   pngquant = require('imagemin-pngquant'),
-  ghPages = require('gulp-gh-pages');
+  ghPages = require('gulp-gh-pages'),
+  dateFormat = require('dateformat');
 
 // Load data
 var apps = JSON.parse(fs.readFileSync('./apps.json'));
@@ -16,6 +17,9 @@ var lastDay = 0;
 apps.forEach(function(a) {
   if (a.created_at > lastDay) { lastDay = a.created_at; }
 });
+
+// Sort
+apps = apps.sort(function(a, b) { return b.created_at - a.created_at; });
 
 // Cut a text and display hypens
 function showLink(str) {
@@ -28,6 +32,12 @@ function showLink(str) {
   return str.replace(/.*?:\/\//g, "");
 }
 
+// Format date!
+function formatDate(time) {
+  var date = new Date(time);
+  return dateFormat(date, "mmmm yyyy");
+}
+
 // Compile views
 gulp.task('views', function() {
   return gulp.src('templates/index.pug')
@@ -35,7 +45,8 @@ gulp.task('views', function() {
       data: {
         apps: apps,
         lastDay: lastDay,
-        showLink: showLink
+        showLink: showLink,
+        formatDate: formatDate
       }
     }))
     .pipe(gulp.dest('./dist'));

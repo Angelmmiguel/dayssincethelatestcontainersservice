@@ -14,6 +14,7 @@ body
     each app, i in apps
       article(class="app" style="border-bottom-color: " + app.color)
         h1= app.name
+        p.date= formatDate(app.created_at) 
         p
           a(href=app.website target="_blank")= showLink(app.website)
         div(class="image")
