@@ -118,7 +118,10 @@ main {
     main .app h1 {
       margin-bottom: .5em; }
     main .app p {
-      margin-top: .5em; }
+      margin: .4em 0; }
+      main .app p.date {
+        margin: .5em 0 .4em;
+        color: #555555; }
       main .app p a {
         color: #888;
         font-style: italic; }
