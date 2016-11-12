@@ -82,5 +82,19 @@
     "logo": "azure.png",
     "created_at": 1461024000000,
     "color": "#29A5DE"
+  },
+  {
+    "name": "Platform9 (K8S)",
+    "website": "https://platform9.com/",
+    "logo": "platform9.png",
+    "created_at": 1466380800000,
+    "color": "#2cc3f3"
+  },
+  {
+    "name": "Container Ship",
+    "website": "https://www.containership.io/",
+    "logo": "containership.png",
+    "created_at": 1412121600000,
+    "color": "#24d5be"
   }
 ]
