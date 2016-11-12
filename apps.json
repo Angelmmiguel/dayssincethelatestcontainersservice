@@ -68,5 +68,19 @@
     "logo": "dockercloud.png",
     "created_at": 1456790400000,
     "color": "#0096e5"
+  },
+  {
+    "name": "Tectonic",
+    "website": "https://tectonic.com",
+    "logo": "tectonic.png",
+    "created_at": 1428278400000,
+    "color": "#1e394c"
+  },
+  {
+    "name": "Microsoft Azure",
+    "website": "https://azure.microsoft.com/en-us/services/container-service/",
+    "logo": "azure.png",
+    "created_at": 1461024000000,
+    "color": "#29A5DE"
   }
 ]
