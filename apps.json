@@ -92,7 +92,7 @@
   },
   {
     "name": "Container Ship",
-    "website": "https://www.containership.io/",
+    "website": "https://containership.io/",
     "logo": "containership.png",
     "created_at": 1412121600000,
     "color": "#24d5be"
@@ -106,7 +106,7 @@
   },
   {
     "name": "Triton",
-    "website": "https://www.joyent.com/triton",
+    "website": "https://joyent.com/triton",
     "logo": "triton.png",
     "created_at": 1427241600000,
     "color": "#011b2a"
