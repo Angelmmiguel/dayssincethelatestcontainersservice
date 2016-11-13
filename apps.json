@@ -96,5 +96,19 @@
     "logo": "containership.png",
     "created_at": 1412121600000,
     "color": "#24d5be"
+  },
+  {
+    "name": "IBM Bluemix",
+    "website": "https://ibm.com/cloud-computing/bluemix/containers",
+    "logo": "ibmbluemix.png",
+    "created_at": 1436140800000,
+    "color": "#4178be"
+  },
+  {
+    "name": "Triton",
+    "website": "https://www.joyent.com/triton",
+    "logo": "triton.png",
+    "created_at": 1427241600000,
+    "color": "#011b2a"
   }
 ]
