@@ -124,5 +124,19 @@
     "logo": "apcera.png",
     "created_at": 1477958400000,
     "color": "#00efc1"
+  },
+  {
+    "name": "Shipped",
+    "website": "https://ciscoshipped.io/",
+    "logo": "shipped.png",
+    "created_at": 1467676800000,
+    "color": "#0ab7ff"
+  },
+  {
+    "name": "Modulus",
+    "website": "https://modulus.io/",
+    "logo": "modulus.png",
+    "created_at": 1416268800000,
+    "color": "#FF4E00"
   }
 ]
