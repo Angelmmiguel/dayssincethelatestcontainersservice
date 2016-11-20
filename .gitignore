@@ -11,3 +11,5 @@ npm-debug*
 
 # Modules
 node_modules
+
+deploy_key
