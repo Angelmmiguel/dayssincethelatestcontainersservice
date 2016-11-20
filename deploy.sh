@@ -27,12 +27,6 @@ cd ..
 git config user.name "Travis CI"
 git config user.email "bot@dayssincethelatestcontainersservice.com"
 
-# If there are no changes to the compiled out (e.g. this is a README update) then just bail.
-if [ -z `git diff --exit-code` ]; then
-    echo "No changes to the output on this push; exiting."
-    exit 0
-fi
-
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
