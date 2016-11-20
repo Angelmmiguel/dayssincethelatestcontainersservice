@@ -1,5 +1,5 @@
 {
-  "name": "howlongsincethelatestapptodeploycontainers",
+  "name": "dayssincethelatestcontainersservice",
   "version": "1.0.0",
   "description": "Apps to deploy containers are like Node libraries. Every day we have a bunch of new ones.",
   "main": "",

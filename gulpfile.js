@@ -93,7 +93,9 @@ gulp.task('static', function() {
 // Deploy new version to gh-pages! :D
 gulp.task('deploy', ['dist'], function() {
   return gulp.src('./dist/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({
+      remoteUrl: 'git@github.com:Angelmmiguel/dayssincethelatestcontainersservice.git'
+    }));
 });
 
 // Compile all assets
